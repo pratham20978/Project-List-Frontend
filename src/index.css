@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Default for mobile screens */
+* {
+    font-size: 12px;
+}
+
+/* For screens larger than 680px */
+@media (min-width: 680px) {
+    * {
+        font-size: 16px;
+    }
+}

@@ -1,34 +1,39 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+// import React from 'react'
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
-    
-    return (
-        <div className='flex justify-between bg-pink-df p-5 mx-20'>
-            <div className="first flex justify-center items-center gap-1 cursor-pointer">
-                <div className="logo">
-                    <img className="w-7" src="/local/home.svg" alt="" />
-                </div>
-                <div className="name mt-1 cursor-pointer">
-                    <span className='mx-1 text-xl font-bold text-slate-800'>Real</span>
-                    <span className=' mx-1 text-xl text-slate-800'>Trust</span>
-                </div>
-            </div>
-            <div className="second">
-                <div className="items flex gap-10 items-center">
-                    <ul className='flex gap-10'>
-                        <li className='cursor-pointer text-slate-700 font-bold'>Home</li>
-                        <li className='cursor-pointer text-slate-700 font-bold'>About</li>
-                        <li className='cursor-pointer text-slate-700 font-bold'>About Project</li>
-                        <li className='cursor-pointer text-slate-700 font-bold'>Contact</li>
-                    </ul>
-                    <Link to="/admin"><div className="cursor-pointer button bg-orange-600 p-3 rounded-lg px-7">
-                    <button className='text-white font-bold text-xl'>CONNECT</button>
-                    </div></Link>
-                </div>
-            </div>
+  return (
+    <div className="flex justify-between p-5 sm:mx-20 bg-pink-df">
+      <div className="flex items-center justify-center gap-1 cursor-pointer first">
+        <div className="logo">
+          <img className="hidden w-7 sm:block" src="/local/home.svg" alt="" />
         </div>
-    )
-}
+        <div className="mt-1 cursor-pointer name">
+          <span className="mx-1 font-bold sm:text-xl text-slate-800">Real</span>
+          <span className="mx-1 sm:text-xl text-slate-800">Trust</span>
+        </div>
+      </div>
+      <div className=" second">
+        <div className="flex items-center gap-10 items">
+          <ul className="hidden sm:flex sm:gap-10">
+            <li className="font-bold cursor-pointer text-slate-700">Home</li>
+            <li className="font-bold cursor-pointer text-slate-700">About</li>
+            <li className="font-bold cursor-pointer text-slate-700">
+              About Project
+            </li>
+            <li className="font-bold cursor-pointer text-slate-700">Contact</li>
+          </ul>
+          <Link to="/admin">
+            <div className="px-2 py-1 bg-orange-600 rounded-lg cursor-pointer sm:p-3 button sm:px-7">
+              <button className="font-bold text-white sm:text-xl">
+                CONNECT
+              </button>
+            </div>
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Navbar
+export default Navbar;
