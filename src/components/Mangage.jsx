@@ -1,26 +1,23 @@
-import React from 'react'
-import { useState } from 'react';
-import Form from './Form';
-
+import React from "react";
+import { useState } from "react";
+import Form from "./Form";
 
 const Mangage = () => {
-    return (
-        <div>
+  return (
+    <div>
+      <div className="relative first">
+        <img src="/Assets/Images/first.svg" alt="" className="w-full" />
 
-            <div className="first relative">
-
-                <img src="/Assets/Images/first.svg" alt="" className="w-full" />
-                
-                
-                <div className="words absolute top-1/4 w-[100px] left-5 text-3xl font-bold text-white">
-                    Consultation Design & Marketing
-                </div>
-
-                <Form />
-                
-            </div>
+        <div className="words absolute top-10 sm:top-1/4 w-[100px] z-10 left-5 text-3xl font-bold text-white">
+          Consultation Design & Marketing
         </div>
-    )
-}
 
-export default Mangage
+        <div className="">
+          <Form />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Mangage;
